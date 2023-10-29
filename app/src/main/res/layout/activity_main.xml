@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoRestaurant"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:contentDescription="@string/logo_restaurant"
+        android:paddingVertical="50dp"
+        android:src="@drawable/logo_restaurant" />
+
+    <TextView
+        android:id="@+id/textStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/store"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#733F0E"
+        app:layout_constraintTop_toBottomOf="@+id/logoRestaurant"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <Spinner
+        android:id="@+id/selectboxStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textStore"
+        android:layout_marginHorizontal="40dp"
+        android:padding="10dp"
+        android:spinnerMode="dropdown"
+        />
+    <TextView
+        android:id="@+id/borderSelectboxStore"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:text=""
+        android:background="@drawable/textlines"
+        app:layout_constraintTop_toBottomOf="@+id/selectboxStore"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#733F0E"
+        app:layout_constraintTop_toBottomOf="@+id/borderSelectboxStore"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textName"
+        android:background="@null"
+        android:layout_marginHorizontal="40dp"
+        android:padding="10dp"
+        android:hint="@string/placeholder_inputname"
+        android:inputType="textCapWords"
+        android:autofillHints="name"
+        />
+    <TextView
+        android:id="@+id/borderInputName"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:text=""
+        android:background="@drawable/textlines"
+        app:layout_constraintTop_toBottomOf="@+id/inputName"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btnSubmit"
+        android:backgroundTint="#D52F2F"
+        app:layout_constraintTop_toBottomOf="@+id/inputName"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/submit"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

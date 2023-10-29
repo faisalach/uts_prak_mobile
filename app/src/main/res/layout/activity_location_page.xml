@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocationPage">
+
+    <TextView
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableStart="@drawable/profile"
+        android:gravity="start|center"
+        android:paddingHorizontal="30dp"
+        android:text="@string/titlebar"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawablePadding="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/locationImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/location_restaurant"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar"
+        />
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        app:layout_constraintTop_toBottomOf="@+id/locationImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/store"
+            android:textColor="#733F0E"
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/storeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/store_location"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:textColor="#733F0E"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location"
+            android:textColor="#733F0E"
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/location"
+            android:gravity="start|center"
+            android:text="@string/find_on_maps"
+            android:textColor="#733F0E"
+            android:drawableTint="#733F0E"
+            android:textSize="16sp"
+            android:layout_gravity="end"
+            />
+    </FrameLayout>
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#D52F2F"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/submit"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

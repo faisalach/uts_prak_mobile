@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Order">
+
+    <TextView
+        android:id="@+id/textOrderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/order_detail"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#733F0E"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textOrderDetailDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/order_detail_desc"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/textOrderDetail"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="40dp"
+        />
+
+    <TextView
+        android:id="@+id/textPengiriman"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pengiriman"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#733F0E"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/textOrderDetailDesc"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/textPengiriman">
+
+
+        <RadioButton
+            android:id="@+id/pickup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/pickup" />
+
+
+        <RadioButton
+            android:id="@+id/fast_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fast_delivery" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btnSubmit"
+        android:backgroundTint="#D52F2F"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup1"
+        android:layout_marginHorizontal="40dp"
+        android:text="@string/done"
+        />
+        
+
+</androidx.constraintlayout.widget.ConstraintLayout>
